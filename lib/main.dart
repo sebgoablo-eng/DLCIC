@@ -40,14 +40,16 @@ class PageAccueil extends StatelessWidget {
           ),
         ],
       ),
-      body: const Column(
-        children: [
-          Image(image: AssetImage('assets/images/magazineInfo.jpg')),
-          PartieTitre(),
-          PartieTexte(),
-          PartieIcone(),
-          PartieRubrique(),
-        ],
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            Image(image: AssetImage('assets/images/magazineInfo.jpg')),
+            PartieTitre(),
+            PartieTexte(),
+            PartieIcone(),
+            PartieRubrique(),
+          ],
+        ),
       ),
     );
   }
@@ -69,7 +71,7 @@ class PartieTitre extends StatelessWidget {
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           Text(
-            'Votre Magazine numérique, votre source d inspiration',
+            "Votre Magazine numérique, votre source d'inspiration",
             style: TextStyle(fontSize: 16, color: Colors.grey),
           ),
         ],
@@ -86,7 +88,7 @@ class PartieTexte extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: const Text(
-        'Magazine infos est bien plus qu un simple magazine d informations. C est votre passserelle vers le monde, une source inestimable de connnaissances et d actualités soigneusement selectionnées pour vous éclairer sur les enjeux mondiaux, la culture, la science et voir meme le divertissement(jeux).',
+        "Magazine infos est bien plus qu'un simple magazine d'informations. C'est votre passerelle vers le monde, une source inestimable de connnaissances et d'actualités soigneusement selectionnées pour vous éclairer sur les enjeux mondiaux, la culture, la science et voir meme le divertissement(jeux).",
       ),
     );
   }
